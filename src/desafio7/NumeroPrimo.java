@@ -1,8 +1,16 @@
 package desafio7;
 
+import java.util.Scanner;
+
 public class NumeroPrimo {
 	public static void main(String[] args) {
+		int termo;
 		
+		System.out.println("Termo:");
+		Scanner entradeDeDados = new Scanner(System.in);
+		termo = entradeDeDados.nextInt();
+		
+		System.out.println("Primo de termo "+termo+" : "+termoPrimo(termo));
 	}
 	
 	public static int termoPrimo(int termo){
