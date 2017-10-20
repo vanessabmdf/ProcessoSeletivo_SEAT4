@@ -28,7 +28,6 @@ public class ProdutoAdjacente {
 				+"05886116467109405077541002256983155200055935729725"
 				+"71636269561882670428252483600823257530420752963450";
 		
-		maiorNumeroSequencia(grandeNumero, digitosAdjacentes);
 	}
 	
 	public static int maiorNumeroSequencia(String grandeNumero, int digitosAdjacentes){
@@ -37,15 +36,23 @@ public class ProdutoAdjacente {
 		
 		for(int ponteiro=0;ponteiro <= 1000-digitosAdjacentes;ponteiro++){
 			
-			produto =  Integer.parseInt(grandeNumero.substring(ponteiro, ponteiro+digitosAdjacentes));
+			produto =  produtoDaString(grandeNumero.substring(ponteiro, ponteiro+digitosAdjacentes));
 			
 			if(produto > maiorNumero)
 				maiorNumero =produto;
 		}
 		
-		System.out.println(maiorNumero);
 		return maiorNumero;
 	}
 	
+	public static int produtoDaString(String sequencia){
+		int produto =1;
+		
+		for(int caracter=0; caracter < sequencia.length();caracter++){
+			produto = produto * Integer.parseInt(sequencia.substring(caracter, caracter+1));
+		}
+		
+		return produto;
+	}
 
 }
