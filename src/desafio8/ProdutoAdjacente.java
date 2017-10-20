@@ -28,6 +28,7 @@ public class ProdutoAdjacente {
 				+"05886116467109405077541002256983155200055935729725"
 				+"71636269561882670428252483600823257530420752963450";
 		
+		System.out.println("Maior produto com "+digitosAdjacentes+" digitos adjacentes e: "+maiorNumeroSequencia(grandeNumero,digitosAdjacentes));
 	}
 	
 	public static int maiorNumeroSequencia(String grandeNumero, int digitosAdjacentes){
