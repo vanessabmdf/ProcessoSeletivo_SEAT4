@@ -3,9 +3,26 @@ package desafio4;
 public class Palindromo {
 	
 	 public static void main(String[] args) {
-		
+		 int multiplicador = 1;
+		 int multiplicando= 1;
+		 int maiorPalindromo = 1;
+		 int produto=1;
+		 
+		 for(int contadorMultiplicador=1;contadorMultiplicador<=999 ;contadorMultiplicador++){
+			 
+			 for(int contadorMultiplicando=1;contadorMultiplicando<=999 ;contadorMultiplicando++){
+				 produto = contadorMultiplicador*contadorMultiplicando;
+				 
+				 if(numeroPalindromo(produto) && produto>maiorPalindromo){
+					 maiorPalindromo = produto;
+					 multiplicador = contadorMultiplicador;
+					 multiplicando = contadorMultiplicando;						 
+				}
+				 
+			 } 
 		 }
-	 
+		 System.out.println("Maior palindromo do produto de dois numeros com 3 digitos: "+ maiorPalindromo+"\nProduto de "+multiplicador+ " com "+multiplicando);		 
+		 }
 	 
 	 public static boolean numeroPalindromo(int numeroTestado){
 		 String numero = Integer.toString(numeroTestado);
