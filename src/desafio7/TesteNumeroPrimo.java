@@ -15,5 +15,10 @@ public class TesteNumeroPrimo {
 	public void testNumeroNaoPrimo() {
 		assertFalse(NumeroPrimo.verificaNumeroPrimo(14));
 	}
+	
+	@Test
+	public void testEnesimoPrimo() {
+		assertEquals(13, NumeroPrimo.termoPrimo(6));
+	}
 
 }
