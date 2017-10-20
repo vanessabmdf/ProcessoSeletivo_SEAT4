@@ -24,6 +24,11 @@ public class Palindromo {
 		 System.out.println("Maior palindromo do produto de dois numeros com 3 digitos: "+ maiorPalindromo+"\nProduto de "+multiplicador+ " com "+multiplicando);		 
 		 }
 	 
+	 public static int maximoNdigitos(int digitos){
+		 
+		 return 0;
+	 }
+	 
 	 public static boolean numeroPalindromo(int numeroTestado){
 		 String numero = Integer.toString(numeroTestado);
 		 String numeroInverso = stringInversa(numero);

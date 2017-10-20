@@ -35,4 +35,11 @@ public class TestPalindromo {
 		
 		assertTrue(Palindromo.numeroPalindromo(numeroTeste));
 	}
+	
+	@Test
+	public void testMaximoNdigitos(){
+		int digitos=3;
+		
+		assertEquals(999, Palindromo.maximoNdigitos(digitos));
+	}
 }
