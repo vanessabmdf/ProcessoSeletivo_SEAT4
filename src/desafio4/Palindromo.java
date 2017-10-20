@@ -1,5 +1,7 @@
 package desafio4;
 
+import java.util.Scanner;
+
 public class Palindromo {
 	
 	 public static void main(String[] args) {
@@ -7,10 +9,17 @@ public class Palindromo {
 		 int multiplicando= 1;
 		 int maiorPalindromo = 1;
 		 int produto=1;
+		 int numeroMaximo;
 		 
-		 for(int contadorMultiplicador=1;contadorMultiplicador<=999 ;contadorMultiplicador++){
+		 
+		 System.out.println("Quantidade de digitos do numero: ");
+		 
+		 Scanner entradaDados = new Scanner(System.in);
+		 numeroMaximo = maximoNdigitos(entradaDados.nextInt());
+		 
+		 for(int contadorMultiplicador=1;contadorMultiplicador<=numeroMaximo ;contadorMultiplicador++){
 			 
-			 for(int contadorMultiplicando=1;contadorMultiplicando<=999 ;contadorMultiplicando++){
+			 for(int contadorMultiplicando=1;contadorMultiplicando<=numeroMaximo ;contadorMultiplicando++){
 				 produto = contadorMultiplicador*contadorMultiplicando;
 				 
 				 if(numeroPalindromo(produto) && produto>maiorPalindromo){
@@ -21,12 +30,18 @@ public class Palindromo {
 				 
 			 } 
 		 }
-		 System.out.println("Maior palindromo do produto de dois numeros com 3 digitos: "+ maiorPalindromo+"\nProduto de "+multiplicador+ " com "+multiplicando);		 
-		 }
+		 System.out.println("Maior palindromo do produto de dois numeros com 3 digitos: "+ maiorPalindromo+"\nProduto de "+multiplicador+ " com "+multiplicando);
+	}
 	 
 	 public static int maximoNdigitos(int digitos){
+		 String numeroTemporario = "";
 		 
-		 return 0;
+		 int contador=0;
+		 while(contador<digitos){
+			 numeroTemporario = numeroTemporario+"9";
+			 contador++;
+		 }
+		 return Integer.parseInt(numeroTemporario);
 	 }
 	 
 	 public static boolean numeroPalindromo(int numeroTestado){
